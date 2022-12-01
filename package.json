@@ -1,0 +1,29 @@
+{
+  "name": "prisma-latency-issue-reproduction",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://gitlab.com/eduhenke/prisma-latency-issue-reproduction",
+  "scripts": {
+    "start": "node 'src/server.js'",
+    "postinstall": "yarn prisma generate"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.7.0",
+    "benchmark": "^2.1.4",
+    "simple-statistics": "^7.8.0"
+  },
+  "devDependencies": {
+    "@types/benchmark": "^2.1.2",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^27.1.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "prisma": "4.7.0"
+  }
+}

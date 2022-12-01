@@ -1,0 +1,34 @@
+/node_modules
+/dist
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+info.log
+error.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Config
+conf/env.json
+.favorites.json
+
+# IDE
+.vscode
+
+# Eslint cache
+.eslintcache
+
+# Typescript build info with no incremental
+tsconfig.tsbuildinfo
+
+deployment.yml
+.npmrc
+.yarnrc
