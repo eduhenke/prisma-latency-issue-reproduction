@@ -52,7 +52,7 @@ async function getPrismaByAuthContext(ctx = { orgId: 'voltbras'} ) {
   return prisma;
 }
 
-async function measure(name, f, outerIters = 1, innerIters = 10) {
+async function measure(name, f, outerIters = 10, innerIters = 1) {
   const diffs = [];
   for (let j = 0; j < outerIters; j++) {
     await Promise.all(

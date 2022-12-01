@@ -5,6 +5,7 @@
   "homepage": "https://gitlab.com/eduhenke/prisma-latency-issue-reproduction",
   "scripts": {
     "start": "node 'src/server.js'",
+    "start:profile": "node --inspect-brk 'src/server.js'",
     "postinstall": "yarn prisma generate"
   },
   "prisma": {
