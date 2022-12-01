@@ -74,6 +74,6 @@ prisma.child[50*50].findUnique().parent() { min: '5689.99', max: '8061.32', mean
 
 We'd like to know the causes for the slow performance, even when running locally. This is seriously affecting our system's performance, as we're having simple Prisma queries taking +5 seconds routinely.
 
-We thought it had to do with the connection pool taking too long to release a connection, but if you see, we have commented out a `setInterval` that was logging the Prisma histogram buckets for connection pool wait time, and it was really lower(all requests having a connection in less than 100ms).
+We thought it had to do with the connection pool taking too long to release a connection, but if you see, we have commented out a `setInterval` that was logging the Prisma histogram buckets for connection pool wait time, and it was really lower(all requests having a connection in less than 100ms). And we also have a `pool_timeout` of 1s, yet it never reaches this timeout.
 
 We're considering dropping Prisma as this issues is affecting our system's performance, with no apparent workaround.
